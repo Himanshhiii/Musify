@@ -9,9 +9,10 @@ app.use(morgan("combined-config"));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/status',(req,res)=>{
+app.post('/register',(req,res)=>{
     res.send({
-        message: "server is listening on port"
+        message: "User registered ${req.body.email}",
+
     })
 })
 
